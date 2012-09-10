@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE window SYSTEM "chrome://x-forwarded-for/locale/x-forwarded-for.dtd">
+
+<overlay id="x-forwarded-for-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript" src="chrome://x-forwarded-for/content/config.js"></script>
+
+<menupopup id="menu_ToolsPopup">
+  <menuitem label="&x-forwarded-for.title;" oncommand="XForwardedForDialog.popupWindow()" />
+</menupopup>
+
+</overlay>

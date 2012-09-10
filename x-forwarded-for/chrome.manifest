@@ -1,0 +1,3 @@
+content x-forwarded-for chrome/content/
+overlay chrome://browser/content/browser.xul chrome://x-forwarded-for/content/overlay.xul
+locale x-forwarded-for en-US chrome/locale/en-US/

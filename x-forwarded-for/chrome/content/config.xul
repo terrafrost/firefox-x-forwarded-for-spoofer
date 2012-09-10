@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+
+<?xml-stylesheet href="chrome://global/skin/"?>
+
+<!DOCTYPE window SYSTEM "chrome://x-forwarded-for/locale/x-forwarded-for.dtd">
+
+<prefwindow id="XForwardedForWindow"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+            dlgbuttons="accept,cancel"
+            title="&x-forwarded-for.title;"
+            style="width: &window.width; !important;">
+
+  <prefpane id="XForwardedForPane" onpaneload="XForwardedForDialog.updateUI()">
+    <script type="application/x-javascript" src="chrome://x-forwarded-for/content/config.js"/>
+
+    <preferences>
+      <preference id="extensions.x-forwarded-for.enabled"    name="extensions.x-forwarded-for.enabled"   type="bool"/>
+      <preference id="extensions.x-forwarded-for.value"      name="extensions.x-forwarded-for.value"     type="string"/>
+    </preferences>
+    
+    <description control="XForwardedForEnabled">&x-forwarded-for.description;</description>
+      <checkbox id="XForwardedForEnabled"
+                preference="extensions.x-forwarded-for.enabled"
+                onsyncfrompreference="return XForwardedForDialog.updateUI()"
+                label="&x-forwarded-for.enabled;"/>
+
+      <grid class="indent" flex="1">
+        <columns>
+          <column/>
+          <column flex="1"/>
+        </columns>
+          
+        <rows>
+          <row align="center">
+            <label value="&x-forwarded-for.value;" accesskey="&x-forwarded-for.value.accesskey;" control="XForwardedForValue"/>
+            <textbox id="XForwardedForValue" preference="extensions.x-forwarded-for.value"/>
+          </row>
+        </rows>
+      </grid>
+    <separator/>
+  </prefpane>
+</prefwindow>

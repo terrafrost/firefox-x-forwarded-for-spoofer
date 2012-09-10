@@ -1,0 +1,7 @@
+<!ENTITY window.width                     "38em">
+
+<!ENTITY x-forwarded-for.title            "X-Forwarded-For Spoofer">
+<!ENTITY x-forwarded-for.description      "The X-Forwarded-For header is usually added to HTTP requests to help servers identify the originating IP address of a request.">
+<!ENTITY x-forwarded-for.enabled          "Enabled">
+<!ENTITY x-forwarded-for.value            "Value:">
+<!ENTITY x-forwarded-for.value.accesskey  "V">

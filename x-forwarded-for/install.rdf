@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>x-forwarded-for@frostjedi.com</em:id>
+    <em:name>X-Forwarded-For Spoofer</em:name>
+    <em:version>1.0.2</em:version>
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> 
+        <em:minVersion>1.5</em:minVersion>
+        <em:maxVersion>3.5.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+    <em:description>Some clients add X-Forwarded-For to HTTP requests in an attempt to help servers identify the originating IP address of a request.  Some clients, however, can set X-Forwarded-For to any arbitrary value.  Some servers assume X-Forwarded-For is unassailable.  No server should.
+
+With this add-on, you can assign an arbitrary IP address to the X-Forwarded-For field, attempt to perform XSS by including HTML in this field, or even attempt SQL injection.</em:description>
+    <em:creator>Jim Wigginton</em:creator>
+    <em:homepageURL>http://www.frostjedi.com/terra/</em:homepageURL>
+    <em:optionsURL>chrome://x-forwarded-for/content/config.xul</em:optionsURL>
+  </Description>
+</RDF>
